@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {"safe": {"()": "app.privacy.SafeFormatter"}},
+  "handlers": {
+    "safe": {
+      "class": "logging.StreamHandler",
+      "stream": "ext://app.privacy.PUBLIC_STREAM",
+      "formatter": "safe"
+    }
+  },
+  "root": {"handlers": ["safe"], "level": "WARNING"},
+  "loggers": {
+    "vllm": {"handlers": ["safe"], "level": "WARNING", "propagate": false},
+    "uvicorn": {"handlers": ["safe"], "level": "WARNING", "propagate": false},
+    "uvicorn.error": {"handlers": ["safe"], "level": "WARNING", "propagate": false},
+    "uvicorn.access": {"handlers": [], "level": "CRITICAL", "propagate": false}
+  }
+}

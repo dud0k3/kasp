@@ -1,0 +1,9 @@
+.git
+.env
+.secrets
+__pycache__
+**/__pycache__
+**/*.pyc
+results
+*.zip
+*.tar

@@ -1,0 +1,14 @@
+{
+  "served-model-name": "qwen-cpu",
+  "host": "0.0.0.0",
+  "port": 8000,
+  "dtype": "bfloat16",
+  "kv-cache-memory-bytes": 268435456,
+  "max-model-len": 2048,
+  "max-num-seqs": 4,
+  "max-num-batched-tokens": 1024,
+  "tensor-parallel-size": 1,
+  "enforce-eager": true,
+  "enable-chunked-prefill": true,
+  "enable-prefix-caching": false
+}
